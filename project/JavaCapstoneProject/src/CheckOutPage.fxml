@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckOutPageController">
+   <children>
+      <GridPane prefHeight="37.0" prefWidth="640.0" style="-fx-background-color: orange;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0000244140624" minWidth="0.0" prefWidth="15.20001220703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="507.5999633789063" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="79.60003662109375" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="36.8" minHeight="10.0" prefHeight="31.200018310546874" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="restaurantNameLbl" prefHeight="102.0" prefWidth="507.0" text="Finalize Your Order" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Trebuchet MS Italic" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onClickBack" prefHeight="25.0" prefWidth="72.0" text="&lt;- Back" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <StackPane prefHeight="72.0" prefWidth="600.0" style="-fx-background-color: #cfe8ef;">
+         <children>
+            <Label text="Check Out">
+               <font>
+                  <Font name="Trebuchet MS" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <GridPane prefHeight="372.0" prefWidth="600.0" style="-fx-background-color: #b6d5de; -fx-border-color: white;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="77.5" minHeight="10.0" prefHeight="62.800004959106445" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="308.5" minHeight="10.0" prefHeight="201.39999504089354" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="144.5" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="222.0" text="Cart">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font>
+            </Label>
+            <VBox GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="checkoutCartItem" alignment="TOP_LEFT" prefHeight="265.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="200.0" text="Price" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font>
+            </Label>
+            <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="checkoutCartPrice" alignment="TOP_LEFT" prefHeight="261.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="190.0" text="Add Tip: ">
+                     <font>
+                        <Font name="Trebuchet MS" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="txtTip" prefHeight="25.0" prefWidth="178.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></TextField>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onClickTip" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: orange;" text="Enter">
+                     <font>
+                        <Font name="Trebuchet MS" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorTip" textFill="RED" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="checkoutCartTotal" alignment="TOP_LEFT" prefHeight="103.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="checkoutCartTotalPrice" alignment="TOP_LEFT" prefHeight="102.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <GridPane prefWidth="600.0" style="-fx-background-color: #cfe8ef;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.5" minWidth="10.0" prefWidth="179.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.5" minWidth="10.0" prefWidth="259.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.5" minWidth="10.0" prefWidth="162.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="75.19999999999999" minHeight="10.0" prefHeight="50.39998779296876" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="44.000024414062494" minHeight="0.0" prefHeight="40.800012207031244" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="201.0" text="Phone Number: ">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="190.0" text="Address: " GridPane.rowIndex="1">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="85.0" text="* Required" textFill="RED" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="85.0" text="* Required" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtPhone" GridPane.columnIndex="1" />
+            <TextField fx:id="txtAddress" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane prefHeight="107.0" prefWidth="600.0" style="-fx-background-color: #cfe8ef;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.5" minWidth="10.0" prefWidth="158.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="304.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.0" minWidth="10.0" prefWidth="155.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="29.60001220703125" minHeight="10.0" prefHeight="15.199989700317381" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="53.600010299682616" minHeight="10.0" prefHeight="32.80002441406249" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="53.999975585937506" minHeight="10.0" prefHeight="53.999975585937506" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onClickOrder" prefHeight="48.0" prefWidth="299.0" style="-fx-background-color: orange;" text="PLACE ORDER!" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

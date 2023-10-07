@@ -1,0 +1,5 @@
+Churros,14.99,https://media.discordapp.net/attachments/1062913308128186439/1141110560784654566/churros.png?width=883&height=662,Classic Churros with caramel sauce
+Nachos,24.99,https://media.discordapp.net/attachments/1062913308128186439/1141110572369330206/nachos.jpg?width=625&height=500,Loaded nachos with cheese
+Tacos,12.99,https://media.discordapp.net/attachments/1062913308128186439/1141110583626842342/taco.jpg?width=625&height=500,Authentic Mexican Tacos
+Loaded Burrito,9.99,https://media.discordapp.net/attachments/1062913308128186439/1141110595295391814/burrito.jpg?width=625&height=500,Extra large chicken burrito
+Brown Rice,12.99,https://media.discordapp.net/attachments/1062913308128186439/1141110603843375174/rice.jpg?width=625&height=500,Mexican brown rice

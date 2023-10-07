@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(orangeBackground.jpg);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.199951171875" minWidth="10.0" prefWidth="164.19998779296876" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.4" minWidth="10.0" prefWidth="261.40000000000003" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.79999999999995" minWidth="10.0" prefWidth="166.79999999999995" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="146.1999839782715" minHeight="10.0" prefHeight="91.00000228881837" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="318.1999961853027" minHeight="10.0" prefHeight="232.00001831054686" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="108.26665039062499" minHeight="10.0" prefHeight="78.39998168945311" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="BOTTOM_CENTER" prefHeight="92.0" prefWidth="265.0" text="Log In" GridPane.columnIndex="1">
+         <font>
+            <Font name="Trebuchet MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="302.0" prefWidth="265.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label text="Username:">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <TextField fx:id="username" />
+            <Label text="Password:">
+               <font>
+                  <Font name="Trebuchet MS" size="12.0" />
+               </font></Label>
+            <PasswordField fx:id="password" />
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.60003662109375" minWidth="10.0" prefWidth="62.4000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.59997558593747" minWidth="10.0" prefWidth="201.59997558593747" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="logInButton" mnemonicParsing="false" onAction="#onClickLogIn" style="-fx-background-color: white;" text="Log in">
+                     <font>
+                        <Font name="Trebuchet MS" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="createAcct" mnemonicParsing="false" onAction="#onClickCreate" style="-fx-background-color: white;" text="Create an Account" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Trebuchet MS" size="12.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="55.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="14.0" />
+         </GridPane.margin>
+      </ImageView>
+   </children>
+</GridPane>

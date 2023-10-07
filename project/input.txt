@@ -1,0 +1,5 @@
+Hamburger,12.99,https://cdn.discordapp.com/attachments/1062913308128186439/1140354454114271282/hamburger.jpg,Hamburger served with french fries and ketchup
+French Fries,5.99,https://cdn.discordapp.com/attachments/1062913308128186439/1140354444408651826/fries.jpg,Deep fried french fries with spice mixture served with sauce
+Fish n' Chips,15.99,https://cdn.discordapp.com/attachments/1062913308128186439/1140354434199732314/fish.jpg,Batter fried fish and chips with famous tartar sauce
+Sausage,12.99,https://cdn.discordapp.com/attachments/1062913308128186439/1140354465032065054/sausage.jpg,World famous sausage on a bun with fried vegetables
+Chicken Fingers,9.99,https://cdn.discordapp.com/attachments/1062913308128186439/1140354429980262513/chicken.jpeg,Fried chicken fingers served with fries and your choice of sauce

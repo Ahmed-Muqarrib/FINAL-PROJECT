@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+      <GridPane prefHeight="37.0" prefWidth="640.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.0000244140624" minWidth="0.0" prefWidth="15.20001220703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="624.7999877929688" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="36.8" minHeight="10.0" prefHeight="31.200018310546874" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="restaurantNameLbl" prefHeight="171.0" prefWidth="626.0" text="Restaurant Name" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <SplitPane dividerPositions="0.29797979797979796" nodeOrientation="RIGHT_TO_LEFT" prefHeight="366.0" prefWidth="640.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="364.8" prefWidth="187.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane prefHeight="45.0" prefWidth="187.0">
+                           <children>
+                              <Label text="Cart" textFill="#1a00ff">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <GridPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="234.0" prefWidth="178.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.4000244140625" minWidth="10.0" prefWidth="112.4000244140625" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.39996337890625" minWidth="10.0" prefWidth="75.5999755859375" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="121.59998779296875" minHeight="10.0" prefHeight="22.400016403198237" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="180.79998168945312" minHeight="0.0" prefHeight="148.80001220703124" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="138.4" minHeight="0.0" prefHeight="63.99998779296877" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="150.0" prefWidth="94.0" text="Cart items" textAlignment="CENTER" textFill="#0095ff" underline="true" wrapText="true" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="104.0" text="Price" textFill="#0095ff" underline="true" GridPane.columnIndex="1" />
+                              <Label fx:id="itemsLbl" alignment="TOP_LEFT" prefHeight="161.0" prefWidth="112.0" text="Label" GridPane.rowIndex="1" />
+                              <Label fx:id="priceLbl" alignment="TOP_LEFT" prefHeight="164.0" prefWidth="94.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="totalItemsLbl" alignment="TOP_LEFT" prefHeight="118.0" prefWidth="366.0" text="Total" GridPane.rowIndex="2" />
+                              <Label fx:id="totalPriceLbl" alignment="TOP_LEFT" prefHeight="70.0" prefWidth="161.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <StackPane prefHeight="80.0" prefWidth="187.0">
+                           <children>
+                              <Button fx:id="ChkOutButton" mnemonicParsing="false" text="Checkout" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="160.0" prefWidth="446.0">
+               <children>
+                  <VBox prefHeight="363.0" prefWidth="446.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="0.0" prefWidth="430.0">
+                           <children>
+                              <Label fx:id="item1" prefHeight="58.0" prefWidth="115.0" text="Menu Item 1" wrapText="true" />
+                              <HBox prefHeight="58.0" prefWidth="238.0">
+                                 <children>
+                                    <Label fx:id="itemdesc1" prefHeight="58.0" prefWidth="203.0" text="Label" />
+                                    <ImageView fitHeight="57.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="58.0" prefWidth="118.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add to Cart" />
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="430.0">
+                           <children>
+                              <Label fx:id="item2" prefHeight="58.0" prefWidth="115.0" text="Menu Item 2" wrapText="true" />
+                              <HBox prefHeight="58.0" prefWidth="238.0">
+                                 <children>
+                                    <Label fx:id="itemdesc2" prefHeight="58.0" prefWidth="203.0" text="Label" />
+                                    <ImageView fitHeight="57.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="58.0" prefWidth="118.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add to Cart" />
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="68.0" prefHeight="0.0" prefWidth="430.0">
+                           <children>
+                              <Label fx:id="item3" prefHeight="58.0" prefWidth="115.0" text="Menu Item 3" wrapText="true" />
+                              <HBox prefHeight="58.0" prefWidth="238.0">
+                                 <children>
+                                    <Label fx:id="itemdesc3" prefHeight="58.0" prefWidth="203.0" text="Label" />
+                                    <ImageView fitHeight="57.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="58.0" prefWidth="118.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add to Cart" />
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="125.0" prefHeight="0.0" prefWidth="430.0">
+                           <children>
+                              <Label fx:id="item4" prefHeight="58.0" prefWidth="115.0" text="Menu Item 4" wrapText="true" />
+                              <HBox prefHeight="58.0" prefWidth="238.0">
+                                 <children>
+                                    <Label fx:id="itemdesc4" prefHeight="58.0" prefWidth="203.0" text="Label" />
+                                    <ImageView fitHeight="57.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="58.0" prefWidth="118.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add to Cart" />
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="183.0" prefHeight="0.0" prefWidth="430.0">
+                           <children>
+                              <Label fx:id="item5" prefHeight="58.0" prefWidth="115.0" text="Menu Item 5" wrapText="true" />
+                              <HBox prefHeight="58.0" prefWidth="238.0">
+                                 <children>
+                                    <Label fx:id="itemdesc5" prefHeight="58.0" prefWidth="203.0" text="Label" />
+                                    <ImageView fitHeight="57.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="58.0" prefWidth="118.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Add to Cart" />
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Remove" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+  </children>
+</VBox>
